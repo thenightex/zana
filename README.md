@@ -1,8 +1,8 @@
 # zana
 A discord bot based on PoE.py - http://github.com/xKynn/PoE.py  
-You can invite my hosted version from [here](https://discordapp.com/api/oauth2/authorize?client_id=592723555402252321&permissions=387136&scope=bot)
-You can join the zana support-ish server [here](https://discord.gg/ctVJC7a)
-Based on [xKynn](http://github.com/xKynn/zana)
+You can invite my hosted version from [here](https://discordapp.com/api/oauth2/authorize?client_id=592723555402252321&permissions=387136&scope=bot)  
+You can join the zana support-ish server [here](https://discord.gg/ctVJC7a)  
+Based on [xKynn](http://github.com/xKynn/zana)  
 
 
 ### Things it can do
