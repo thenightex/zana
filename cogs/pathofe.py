@@ -1,3 +1,4 @@
+    
 import asyncio
 import copy
 import re
@@ -19,8 +20,7 @@ from utils.class_icons import class_icons
 from utils.responsive_embed import responsive_embed
 from poe import models
 
-
-class PathOfExile:
+class PathOfExile(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.client = Client()
@@ -45,7 +45,7 @@ class PathOfExile:
     @commands.command()
     async def invite(self, ctx):
         """ Invite the bot. """
-        em = Embed(title="Invite Zana", color=self.bot.user_color, url="https://discordapp.com/api/oauth2/authorize?client_id=474597240854282241&permissions=387136&scope=bot")
+        em = Embed(title="Invite Zana", color=self.bot.user_color, url="https://discordapp.com/api/oauth2/authorize?client_id=592723555402252321&permissions=387136&scope=bot")
         await ctx.send(embed=em)
         
     @commands.command()

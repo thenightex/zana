@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 
-class Help:
+class Help(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.cmd = bot.get_command
@@ -29,17 +29,16 @@ class Help:
                                        '`Attach Files`, `Read Message History`, `Add Reactions`, `Use External Emojis`\n'
                                        '--\nTo get help or more information on a specific command, use:\n'
                                        f'`{bot_prefix}help <command name>`\n'
-                                       '--\nYou can also join the semi-support server [here](https://discord.gg/hUWQ5fJ)\n'
-                                       '--\nRead my messy code [here](http://github.com/xKynn/zana) and PoE.py'
+                                       '--\nYou can also join the semi-support server [here](https://discord.gg/ctVJC7a)\n'
+                                       '--\nRead the code [here](http://github.com/thenightex/zana) and PoE.py'
                                        ' [here](http://github.com/xKynn/PoE.py)\n'
-                                       '--\nIf you like my work and would like to help me, '
-                                       'Ko-Fi/Paypal: [Link](https://ko-fi.com/D1D6EXXV)\n'
+                                       '--\nBig shoutout to the original creator [xKynn](http://github.com/xKynn)\n'
                                        '--\nDislike the font for stats in charinfo/PoB info?\n'
                                        "I had to use it instead of discord's markdown formatting because of a bug in "
                                        'discord/electron regarding text formatting in embedded data.',
                            color=self.color)
 
-        em.set_footer(text="Contact me at Demo#7645")
+        em.set_footer(text="Contact me at Nightex#8656/@Nightexd")
 
         # This can't go in the init because help isn't loaded last & thus misses some commands
         em.add_field(name="Commands", value=' • '+'\n • '.join(f"***{c.name}*** - {c.short_doc}" for c in self.bot.commands if

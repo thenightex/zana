@@ -7,7 +7,7 @@ from nltk import bigrams
 from cachetools import cached
 from .cache import cache
 
-with open('utils/items.json') as f:
+with open('C:/Users/Sascha.DATEC-SCHMIDT/Desktop/zana-master/utils/items.json') as f:
     items = json.load(f)
 
 
@@ -35,19 +35,20 @@ def find_one(name: str, client, loop):
                 processes = []
                 name_tri = [x for x in bigrams(name.lower())]
                 for item_name in items["names"]:
-                    p = threading.Thread(target=calc_bigrams, args=(name_tri, item_name, matches, ))
+                    p = threading.Thread(target=calc_bigrams, args=(name_tri, item_name, matches,))
                     processes.append(p)
                     p.start()
 
                 for process in processes:
                     process.join()
 
-                #return {"matches": sorted(matches.items(), key=lambda it: it[1])[:3], "name": name.replace("%", "")}
-                return {"matches": sorted(matches.items(), key= lambda kv: kv[1], reverse=True)[:3], "name": name}
+                # return {"matches": sorted(matches.items(), key=lambda it: it[1])[:3], "name": name.replace("%", "")}
+                return {"matches": sorted(matches.items(), key=lambda kv: kv[1], reverse=True)[:3], "name": name}
 
         return item[0]
     else:
         return POEClientException
+
 
 @cached(cache)
 def cache_pob_xml(xml, client):
