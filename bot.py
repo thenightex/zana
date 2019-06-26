@@ -117,7 +117,7 @@ class Zana(commands.Bot):
         self.convert_command = self.get_command('convert')
 
         # Dump channel where i can upload 10 images at once, get url and serve in embeds freely as i'd like to
-        self.dump_channel = self.get_channel(516955281322803200)
+        self.dump_channel = self.get_channel(536127572396736544)
         self.ses = aiohttp.ClientSession()
         c = await self.application_info()
         self.owner = c.owner
