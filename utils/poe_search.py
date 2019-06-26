@@ -7,7 +7,7 @@ from nltk import bigrams
 from cachetools import cached
 from .cache import cache
 
-with open('C:/Users/Sascha.DATEC-SCHMIDT/Desktop/zana-master/utils/items.json') as f:
+with open('utils/items.json') as f:
     items = json.load(f)
 
 
